@@ -6,7 +6,7 @@ app.use(express.static('public'));
 app.use(expressLayouts);
 
 app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set('views', 'views'); // the second 'views' is the name of our folder.
 app.set('layout', 'layout/main-layout.ejs');
 
 app.locals.pageTitle = 'PP - Web Colors App'
