@@ -48,17 +48,23 @@ app.get('/red', (req, res, next) => {
 
 // Random's Page
 app.get('/random', (req, res, next) => {
-  res.render('random.ejs', {
-  colorArray: colorArray[Math.floor(Math.random()*colorArray.length)]
+  const randomIndex = Math.floor(Math.random() * color.length);
 
-  });
+  const randomColor = color[randomIndex];
+
+  res.render(
+    'random.ejs',
+    {
+        theColor: randomColor
+    }
+  );
 });
+
 
 app.listen(3000);
 
-
 // DATABASE OF COLORS
-const colorArray = [
+const color = [
   { keyword: 'black',                hex: '#000000', category: 'grayscale' },
   { keyword: 'silver',               hex: '#c0c0c0', category: 'grayscale' },
   { keyword: 'gray',                 hex: '#808080', category: 'grayscale' },

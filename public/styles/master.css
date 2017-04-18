@@ -29,9 +29,16 @@ li {
   /*background-position: top;*/
   background-size: contain;
 }
+
 footer {
   clear: both;
   position: relative;
   bottom: 0;
+
+}
+
+.color-sample {
+  padding-left: 25px;
+  border-radius: 10px;
 
 }
